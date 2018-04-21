@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--QX==================== Imperial Guard Turret Addon Mod - Automated Mini-AutoGun Sentry Turret =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_ASTMiniAutoGun</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>0.82</SwayFactor>
+			<Bulk>10.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_MiniAutoSentry</defaultProjectile>
+			
+			<warmupTime>0.3</warmupTime>
+			<range>18</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>10</burstShotCount>
+			<soundCast>ShotMinigun</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>3</muzzleFlashScale>
+			<recoilAmount>0.76</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<!-- <AmmoUser>
+			<magazineSize>40</magazineSize>
+			<reloadTime>4.00</reloadTime>
+			<ammoSet>AmmoSet_MiniAutoSentry</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>10</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+	<!--QX==================== Imperial Guard Turret Addon Mod - Automated AutoGun Sentry Turret =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_ASTAutoGun</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.13</ShotSpread>
+			<SwayFactor>0.92</SwayFactor>
+			<Bulk>13.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_AutoSentry</defaultProjectile>
+			<warmupTime>0.5</warmupTime>
+			<range>22</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>10</burstShotCount>
+			<soundCast>ShotMinigun</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>5</muzzleFlashScale>
+			<recoilAmount>0.78</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<!-- <AmmoUser>
+			<magazineSize>50</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_AutoSentry</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>10</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+	<!--QX==================== Imperial Guard Turret Addon Mod - Automated Twin Autocannon Sentry Turret =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_ASTMiniGun</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.13</ShotSpread>
+			<SwayFactor>0.92</SwayFactor>
+			<Bulk>13.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_SentryMinigun</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<range>23</range>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>15</burstShotCount>
+			<soundCast>ShotMinigun</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<recoilAmount>0.78</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<!-- <AmmoUser>
+			<magazineSize>100</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_SentryMinigun</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>15</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+	<!--QX==================== Imperial Guard Turret Addon Mod - Heavy Bolter Emplacement =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_MTHeavyBolter</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>0.82</SwayFactor>
+			<Bulk>13.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_HeavyBolterEmplacement</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<range>35</range>
+			<minRange>2</minRange>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>6</burstShotCount>
+			<soundCast>HeavyBolterSound</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>12</muzzleFlashScale>
+			<recoilAmount>0.78</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+<!-- 		<AmmoUser>
+			<magazineSize>36</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_HeavyBolterEmplacement</ammoSet>
+		</AmmoUser> -->   
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>6</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+	<!--QX==================== Imperial Guard Turret Addon Mod - Las Cannon Emplacement =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_MTLasCannon</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>0.82</SwayFactor>
+			<Bulk>13.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_LasCannonEmplacement</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<range>45</range>
+			<minRange>2</minRange>
+			<ticksBetweenBurstShots>45</ticksBetweenBurstShots>
+			<burstShotCount>2</burstShotCount>
+			<soundCast>LasCannonSound</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>12</muzzleFlashScale>
+			<recoilAmount>0.78</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<!-- <AmmoUser>
+			<magazineSize>10</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_LasCannonEmplacement</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>2</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+	<!--QX==================== Imperial Guard Turret Addon Mod - Tarantula Dual Heavy Bolter Turret Gun =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_MTLasCannon</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>0.82</SwayFactor>
+			<Bulk>13.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_TarantulaDualHeavyBolter</defaultProjectile>
+			<warmupTime>1</warmupTime>
+			<range>42</range>
+			<minRange>5</minRange>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>12</burstShotCount>
+			<soundCast>HeavyBolterSound</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<recoilAmount>0.78</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<!-- <AmmoUser>
+			<magazineSize>60</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_TarantulaDualHeavyBolter</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>12</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+	<!--QX==================== Imperial Guard Turret Addon Mod - Tarantula Dual Las Cannon Turret Gun =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_MTLasCannon</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>0.82</SwayFactor>
+			<Bulk>13.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_TarantulaDualLasCannon</defaultProjectile>
+			<warmupTime>1.5</warmupTime>
+			<range>46</range>
+			<minRange>5</minRange>
+			<ticksBetweenBurstShots>45</ticksBetweenBurstShots>
+			<burstShotCount>3</burstShotCount>
+			<soundCast>LasCannonSound</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<recoilAmount>0.78</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+	<!-- 	<AmmoUser>
+			<magazineSize>18</magazineSize>
+			<reloadTime>4.75</reloadTime>
+			<ammoSet>AmmoSet_TarantulaDualLasCannon</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+	<!--QX==================== Imperial Guard Turret Addon Mod - Base Desfense ThudGun Turret Gun =========================QX-->
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Turret_MTLasCannon</defName>
+		<statBases>
+			<SightsEfficiency>1.0</SightsEfficiency>
+			<ShotSpread>0.11</ShotSpread>
+			<SwayFactor>0.82</SwayFactor>
+			<Bulk>13.0</Bulk> 
+		</statBases>
+		<Properties>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_ThudGunTurret</defaultProjectile>
+			<forcedMissRadius>13.0</forcedMissRadius>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupTime>5</warmupTime>
+			<range>350</range>
+			<minRange>30</minRange>
+			<ticksBetweenBurstShots>80</ticksBetweenBurstShots>
+			<burstShotCount>4</burstShotCount>
+			<soundCast>ThudGunSound</soundCast>
+			<soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>15</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<recoilAmount>0.78</recoilAmount>
+			<recoilPattern>Mounted</recoilPattern>
+		</Properties>
+		<!-- <AmmoUser>
+			<magazineSize>8</magazineSize>
+			<reloadTime>10</reloadTime>
+			<ammoSet>AmmoSet_ThudGunTurret</ammoSet>
+		</AmmoUser> -->
+		<FireModes>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>SuppressFire</aiAimMode>
+			<aimedBurstShotCount>4</aimedBurstShotCount>
+		</FireModes>
+		<weaponTags>
+
+		</weaponTags>
+
+	</Operation>
+</Patch>

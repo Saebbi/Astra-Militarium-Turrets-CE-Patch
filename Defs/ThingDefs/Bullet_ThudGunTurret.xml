@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>AmmoThudGunTurret</defName>
+		<label>Thud Gun Turret Emplacement charge</label>
+		<parent>AmmoAdvanced</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_ThudGunTurret</defName>
+		<label>Thud Gun Turret Emplacement charge</label>
+		<ammoTypes>
+			<Ammo_ThudGunTurret>Bullet_ThudGunTurret</Ammo_ThudGunTurret>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Name="ThudGunTurretBase" ParentName="AmmoBase" Abstract="True">
+		<description>Thud Gun Turret Emplacement ammo</description>
+		<statBases>
+			<Mass>0.01</Mass>
+			<Bulk>0.02</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoThudGunTurret</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="ThudGunTurretBase">
+		<defName>Ammo_ThudGunTurret</defName>
+		<label>Thud Gun Turret Emplacement cartridge</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/HE</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.95</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Name="BaseThudGunTurret" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/IGTurrets/BaseDefTurrets/ThudGun/ThudGunMk1-Projectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<projectile>
+
+			<damageDef>Flame</damageDef>
+
+			<explosionRadius>8</explosionRadius>
+			<preExplosionSpawnThingDef>FilthFuel</preExplosionSpawnThingDef>
+			<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
+			<speed>20</speed>
+			<soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+			<soundExplode>IGLRG_Explosion</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+			<flyOverhead>true</flyOverhead>
+
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseThudGunTurret">
+		<defName>Bullet_ThudGunTurret</defName>
+		<label>Thud Gun Turret Emplacement bullet</label>
+		<projectile>
+			<damageAmountBase>30</damageAmountBase>
+			<armorPenetration>1.2</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_ThudGunTurret</defName>
+		<label>make Thud Gun Turret Emplacement cartridge x500</label>
+		<description>Craft 500 Thud Gun Turret Emplacement cartridges.</description>
+		<jobString>Making Thud Gun Turret Emplacement cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Component</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Component</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_ThudGunTurret>500</Ammo_ThudGunTurret>
+		</products>
+		<researchPrerequisite>BasicImperialConstruction</researchPrerequisite>
+	</RecipeDef>
+
+</Defs>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>AmmoTarantulaDualLasCannon</defName>
+		<label>Tarantula Dual Las Cannon Emplacement charge</label>
+		<parent>AmmoAdvanced</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_TarantulaDualLasCannon</defName>
+		<label>Tarantula Dual Las Cannon Emplacement charge</label>
+		<ammoTypes>
+			<Ammo_TarantulaDualLasCannon>Bullet_TarantulaDualLasCannon</Ammo_TarantulaDualLasCannon>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Name="TarantulaDualLasCannonBase" ParentName="AmmoBase" Abstract="True">
+		<description>Tarantula Dual Las Cannon Emplacement ammo</description>
+		<statBases>
+			<Mass>0.01</Mass>
+			<Bulk>0.02</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>AmmoTarantulaDualLasCannon</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="TarantulaDualLasCannonBase">
+		<defName>Ammo_TarantulaDualLasCannon</defName>
+		<label>Tarantula Dual Las Cannon Emplacement cartridge</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/HE</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.95</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Name="BaseTarantulaDualLasCannon" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/IGTurrets/AutoTurrets/LasCannon/DualLasCannonProjectile</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>IGArmorPiercing</damageDef>
+			
+			<speed>90</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseTarantulaDualLasCannon">
+		<defName>Bullet_TarantulaDualLasCannon</defName>
+		<label>Tarantula Dual Las Cannon Emplacement bullet</label>
+		<projectile>
+			<damageAmountBase>100</damageAmountBase>
+			<armorPenetration>1.2</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_TarantulaDualLasCannon</defName>
+		<label>make Tarantula Dual Las Cannon Emplacement cartridge x500</label>
+		<description>Craft 500 Tarantula Dual Las Cannon Emplacement cartridges.</description>
+		<jobString>Making Tarantula Dual Las Cannon Emplacement cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Component</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Component</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_TarantulaDualLasCannon>500</Ammo_TarantulaDualLasCannon>
+		</products>
+		<researchPrerequisite>BasicImperialConstruction</researchPrerequisite>
+	</RecipeDef>
+
+</Defs>
