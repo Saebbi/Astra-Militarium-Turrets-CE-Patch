@@ -67,7 +67,7 @@
 		<label>AutoSentry bullet</label>
 		<projectile>
 			<damageAmountBase>5</damageAmountBase>
-			<armorPenetration>0.1</armorPenetration>
+			<armorPenetration>0.4</armorPenetration>
 		</projectile>
 	</ThingDef>
 
